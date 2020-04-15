@@ -32,6 +32,7 @@ def payment_process(request):
             # create invoice e-mail
             subject = 'Fun for Kids Store - Invoice no. {}'.format(order.id)
             message = 'Thank you for shopping at Fun for Kids. Your total bill card to CC is.'
+
             email = EmailMessage(subject,
                                  message,
                                  'admin@myshop.com',

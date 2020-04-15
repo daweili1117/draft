@@ -50,16 +50,17 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/indianexpress/static/css" />
-      <recent name="C:\Users\jaswi\PycharmProjects\restaurant" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/indianexpress/static/images" />
       <recent name="C:\Users\jaswi\PycharmProjects\restaurant\indianexpress\templates\indianexpress" />
       <recent name="C:\Users\jaswi\PycharmProjects\restaurant\indianexpress\templates\registration" />
       <recent name="C:\Users\jaswi\PycharmProjects\restaurant\indianexpress\templates" />
       <recent name="C:\Users\jaswi\PycharmProjects\restaurant" />
-      <recent name="C:\Users\jaswi\PycharmProjects\restaurant\indianexpress" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/indianexpress/static/images" />
+      <recent name="$PROJECT_DIR$/indianexpress/static/css" />
+      <recent name="C:\Users\jaswi\PycharmProjects\restaurant" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.list.html">
@@ -117,8 +118,8 @@
     <list>
       <item itemvalue="Django Server.restaurant" />
       <item itemvalue="JavaScript Debug.menu.html" />
-      <item itemvalue="Python.mpg" />
       <item itemvalue="JavaScript Debug.list.html" />
+      <item itemvalue="Python.mpg" />
     </list>
     <recent_temporary>
       <list>
@@ -159,6 +160,8 @@
       <workItem from="1586884338492" duration="255000" />
       <workItem from="1586884656646" duration="8876000" />
       <workItem from="1586899771358" duration="2307000" />
+      <workItem from="1586913414427" duration="4798000" />
+      <workItem from="1586983486020" duration="5488000" />
     </task>
     <servers />
   </component>

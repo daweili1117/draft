@@ -7,10 +7,12 @@
 
     <title>Indian Xpress</title>
        <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="{% static "css/base.css" %}" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 
     <style>
 
@@ -58,7 +60,22 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li><a href="{% url 'indianexpress:home' %}">About</a></li>
-                    <li><a href="{% url 'indianexpress:menu' %}" >Menu </a></li>
+                    <li>
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Menu
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+
+{#                        <a href="{% url 'indianexpress:menu' %}" >Menu </a>#}
+
+
+                    </li>
                     <li><a href="{% url 'indianexpress:gallery' %}">Gallery</a></li>
                     <li><a href="{% url 'indianexpress:cart' %}">Cart</a></li>
                     <li><a href="{% url 'indianexpress:reservation' %}">Reservation</a></li>
@@ -83,6 +100,9 @@
             </div>
             </div>
         </nav>
+
+
+
         <div class="content container">
     <div class="row">
         <div class="col-md-8">
