@@ -1,9 +1,17 @@
-#from django.contrib.auth.decorators import login_required
+# from django.contrib.auth.decorators import login_required
+from itertools import product
+
 from django.shortcuts import render
-from django.shortcuts import render, redirect, get_object_or_404,HttpResponseRedirect
+from django.shortcuts import render, redirect, get_object_or_404, HttpResponseRedirect
 from django.contrib.sites.shortcuts import get_current_site
 from django.utils.encoding import force_text
 from django.contrib.auth import login, authenticate
+
+from cart.cart import Cart
+from cart.forms import CartAddProductForm
+from orders.forms import OrderCreateForm
+from orders.models import OrderItem
+from shop.models import Product, Category
 from .forms import SignUpForm
 from .models import *
 from .forms import *
@@ -16,11 +24,16 @@ from django.utils.http import urlsafe_base64_encode
 
 from django.template.loader import render_to_string
 
+from django.shortcuts import render, get_object_or_404
+
+from cart.cart import Cart
+from cart.forms import CartAddProductForm
 
 
 def home(request):
-   return render(request, 'indianexpress/home.html',
-                 {'indianexpress': home})
+    return render(request, 'indianexpress/home.html',
+                  {'indianexpress': home})
+
 
 def activation_sent_view(request):
     return render(request, 'activation_sent.html')
@@ -52,7 +65,7 @@ def signup(request):
         user.refresh_from_db()
         user.profile.first_name = form.cleaned_data.get('first_name')
         user.profile.last_name = form.cleaned_data.get('last_name')
-        #user.profile.phone_number = form.cleaned_data.get('phone_number')
+        # user.profile.phone_number = form.cleaned_data.get('phone_number')
         user.profile.zip_code = form.cleaned_data.get('zip_code')
         user.profile.email = form.cleaned_data.get('email')
         user.is_active = False
@@ -85,17 +98,27 @@ def reservation(request):
         e = request.POST['time']
         f = request.POST['guests']
         g = request.POST['requests']
-        bb=Reservation.objects.create(name=a,email=b,num=c,date=d,time=e,guests=f,requests=g)
+        bb = Reservation.objects.create(name=a, email=b, num=c, date=d, time=e, guests=f, requests=g)
         bb.save()
-    aq='Book Us!'
-    return render(request, 'indianexpress/reservation.html', {'indianexpress': reservation}, {'title':aq})
+    aq = 'Book Us!'
+    return render(request, 'indianexpress/reservation.html', {'indianexpress': reservation}, {'title': aq})
 
 
 def menu(request):
-    return render(request, 'shop/product/list.html', {'indianexpress': menu})
+    cart = Cart(request)
+    for item in cart:
+        item['update_quantity_form'] = CartAddProductForm(
+            initial={'quantity': item['quantity'], 'update': True})
+    return render(request, 'shop/product/.html', {'cart': cart})
+
 
 def cart(request):
-    return render(request, 'cart/detail.html', {'indianexpress': cart})
+    cart = Cart(request)
+    for item in cart:
+        item['update_quantity_form'] = CartAddProductForm(
+            initial={'quantity': item['quantity'], 'update': True})
+    return render(request, 'cart/detail.html', {'cart': cart})
+
 
 def gallery(request):
     return render(request, 'indianexpress/gallery.html', {'indianexpress': gallery})

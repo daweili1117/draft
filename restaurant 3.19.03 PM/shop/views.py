@@ -1,4 +1,6 @@
 from django.shortcuts import render, get_object_or_404
+
+from cart.cart import Cart
 from .models import Category, Product
 from cart.forms import CartAddProductForm
 
@@ -27,4 +29,5 @@ def product_detail(request, id, slug):
                   'shop/product/detail.html',
                   {'product': product,
                    'cart_product_form': cart_product_form})
+
 
