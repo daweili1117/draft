@@ -32,11 +32,14 @@ def payment_process(request):
             order.save()
             # create invoice e-mail
             subject = 'Indianexpress - Invoice no. {}'.format(order.id)
-            message = 'Thank you for shopping at Indianexpress. Your total bill card to CC is.'
+
+            message = 'Thank you for shopping at Indianexpress.' \
+                      ' Your payment has been processed successfully. ' \
+                      'Invoice no. {}'.format(order.id)
 
             email = EmailMessage(subject,
                                  message,
-                                 'admin@myshop.com',
+                                 'indian.xpress7@gmail.com',
                                  [order.email])
             # generate PDF
             # html = render_to_string('orders/order/pdf.html', {'order': order})
@@ -60,8 +63,6 @@ def payment_process(request):
                       'payment/process.html',
                       {'order': order,
                        'client_token': client_token})
-
-
 
 
 def payment_done(request):
