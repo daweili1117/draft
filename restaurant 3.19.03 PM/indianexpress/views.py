@@ -109,7 +109,7 @@ def menu(request):
     for item in cart:
         item['update_quantity_form'] = CartAddProductForm(
             initial={'quantity': item['quantity'], 'update': True})
-    return render(request, 'shop/product/.html', {'cart': cart})
+    return render(request, 'shop/product/list.html', {'cart': cart})
 
 
 def cart(request):

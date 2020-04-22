@@ -1,4 +1,4 @@
-Hello, {{ name }}, Thank you for shopping at Indianexpress. Following are your order details:
+Hello {{ name }}, Thank you for making a order with IndianXpress. Following are your order details:
 
 Name: {{ name }}
 

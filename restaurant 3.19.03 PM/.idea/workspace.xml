@@ -46,23 +46,23 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/indianexpress/templates/indianexpress" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/indianexpress/templates/indianexpress" />
+      <recent name="$PROJECT_DIR$/tests" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/indianexpress/static/images" />
+      <recent name="$PROJECT_DIR$/indianexpress/static/css" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/indianexpress/templates/indianexpress" />
       <recent name="$PROJECT_DIR$/indianexpress/static/images" />
       <recent name="C:\Users\jaswi\PycharmProjects\restaurant\indianexpress\templates\indianexpress" />
       <recent name="C:\Users\jaswi\PycharmProjects\restaurant\indianexpress\templates\registration" />
       <recent name="C:\Users\jaswi\PycharmProjects\restaurant\indianexpress\templates" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/tests" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/indianexpress/static/images" />
-      <recent name="$PROJECT_DIR$/indianexpress/static/css" />
-      <recent name="C:\Users\jaswi\PycharmProjects\restaurant" />
     </key>
   </component>
   <component name="RunManager" selected="Python tests.Unittests in unitTest_remove from card.py">
@@ -206,6 +206,8 @@
       <workItem from="1587056522276" duration="19045000" />
       <workItem from="1587391162300" duration="4958000" />
       <workItem from="1587566199453" duration="12115000" />
+      <workItem from="1587584222332" duration="365000" />
+      <workItem from="1587588943620" duration="6430000" />
     </task>
     <servers />
   </component>
@@ -233,9 +235,10 @@
       <screen x="0" y="0" width="1344" height="840" />
     </state>
     <state x="406" y="229" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1344.840@0.0.1344.840" timestamp="1586884347181" />
-    <state x="413" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584591368020">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="406" y="129" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587590331080">
+      <screen x="0" y="0" width="1344" height="840" />
     </state>
+    <state x="406" y="129" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1344.840@0.0.1344.840" timestamp="1587590331080" />
     <state x="413" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1584591368020" />
     <state x="463" y="120" key="FileChooserDialogImpl" timestamp="1584411969472">
       <screen x="0" y="0" width="1366" height="728" />
