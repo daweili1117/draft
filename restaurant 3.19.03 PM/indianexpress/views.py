@@ -1,6 +1,7 @@
 # from django.contrib.auth.decorators import login_required
 from itertools import product
 
+from django.core.mail import send_mail
 from django.shortcuts import render
 from django.shortcuts import render, redirect, get_object_or_404, HttpResponseRedirect
 from django.contrib.sites.shortcuts import get_current_site
@@ -88,20 +89,43 @@ def signup(request):
         form = SignUpForm()
     return render(request, 'indianexpress/signup.html', {'form': form})
 
-
 def reservation(request):
+    test = Reservation.objects.all
+
     if request.method == 'POST':
-        a = request.POST['name']
-        b = request.POST['email']
-        c = request.POST['num']
-        d = request.POST['date']
-        e = request.POST['time']
-        f = request.POST['guests']
-        g = request.POST['requests']
-        bb = Reservation.objects.create(name=a, email=b, num=c, date=d, time=e, guests=f, requests=g)
-        bb.save()
-    aq = 'Book Us!'
-    return render(request, 'indianexpress/reservation.html', {'indianexpress': reservation}, {'title': aq})
+        form = ReservationForm(request.POST)
+        if form.is_valid():
+            #reserve = form.save()
+            #reserve.refresh_from_db()
+            name = form.cleaned_data.get('name')
+            email = form.cleaned_data.get('email')
+            num = form.cleaned_data.get('num')
+            date = form.cleaned_data.get('date')
+            time = form.cleaned_data.get('time')
+            guests = form.cleaned_data.get('guests')
+            requests = form.cleaned_data.get('requests')
+
+            ctx = {
+                'name': name,
+                'email': email,
+                'num': num,
+                'date': date,
+                'time': time,
+                'guests': guests,
+                'requests': requests,
+            }
+            message = render_to_string('indianexpress/reservation.txt', ctx)
+            send_mail(
+                'Your reservation with IndianXpress',
+                message,
+                'indxpr@gmail.com',
+                [email],
+            )
+            return render(request, 'indianexpress/confirm.html', ctx)
+    else:
+        aq = 'Book Us!'
+        return render(request, 'indianexpress/reservation.html', {'indianexpress': reservation}, {'title': aq})
+
 
 
 def menu(request):

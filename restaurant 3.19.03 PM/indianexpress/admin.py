@@ -8,3 +8,4 @@ class ReservationAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Reservation ,ReservationAdmin)
+

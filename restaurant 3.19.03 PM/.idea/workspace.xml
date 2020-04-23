@@ -65,7 +65,7 @@
       <recent name="C:\Users\jaswi\PycharmProjects\restaurant\indianexpress\templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in unitTest_remove from card.py">
+  <component name="RunManager" selected="Django Server.restaurant">
     <configuration name="menu.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/restaurant 3.19.03 PM/indianexpress/templates/indianexpress/menu.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -208,6 +208,7 @@
       <workItem from="1587566199453" duration="12115000" />
       <workItem from="1587584222332" duration="365000" />
       <workItem from="1587588943620" duration="6430000" />
+      <workItem from="1587600378933" duration="376000" />
     </task>
     <servers />
   </component>
